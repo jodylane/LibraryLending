@@ -1,0 +1,321 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background: 0 0; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: 700; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format("woff"); }
+header {
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../img/bg_img.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px;
+  float: right;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; }
+  nav a:hover {
+    transition: color linear 500ms;
+    color: white; }
+
+.headline {
+  margin: auto;
+  padding-top: 150px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white; }
+
+form {
+  text-align: center; }
+  form input {
+    width: 500px;
+    border: 3.4px solid #ccc;
+    border-radius: 4px; }
+    form input .search {
+      box-sizing: border-box;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px; }
+
+.sub-headline {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white; }
+
+footer {
+  height: 150px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../img/bg_img.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.nav-footer .a-footer {
+  padding: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px;
+  float: right;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+  .nav-footer .a-footer:hover {
+    transition: color linear 500ms;
+    color: white; }
+
+.copyright {
+  text-align: center;
+  color: white;
+  display: inline-block; }
+
+.featured-section {
+  height: 700px;
+  background-color: white; }
+
+.featured-headline {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: black; }
+
+.bookthumb-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding-bottom: 100px; }
+  .bookthumb-container .book_thumb {
+    display: block;
+    width: 150px;
+    height: 225px;
+    background: #ccc;
+    margin: 10px;
+    float: left; }
+
+.book-text {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.about-section {
+  height: 500px;
+  background-color: #ccc; }
+
+.about {
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: black; }
+
+.about-description {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 300; }
+
+.book-list {
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 0px;
+  height: 600px; }
+
+.booklist-headline {
+  margin: auto;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black; }
+
+.booklist-table td, th {
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  text-align: left; }
+
+.booklist-table {
+  border-collapse: collapse;
+  width: 100%; }
+
+th, td {
+  padding: 15px; }
+
+/*# sourceMappingURL=sections.css.map */
