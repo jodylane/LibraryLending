@@ -1,0 +1,40 @@
+@mixin btn(){
+  margin: 8px 0;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+@mixin input(){
+  margin: 8px 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-shadow: inset 0 1px 1px;
+  &:focus{
+    box-shadow: 0px 0px 8px .5px $btn_primary1;
+  }
+}
+@mixin search(){
+  margin: 8px 0;
+  border-radius: 4px 0 0 4px;
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-shadow: inset 0 1px 1px;
+  &:focus{
+    box-shadow: 0px 0px 8px .5px $btn_primary1;
+  }
+}
+@mixin search-btn(){
+  margin: 8px 0 8px -8.2px;
+  padding: 6px 12px 8px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0 4px 4px 0;
+}
