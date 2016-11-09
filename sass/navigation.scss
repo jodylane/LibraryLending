@@ -1,0 +1,25 @@
+nav{
+  height: 50px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  border-color: #e7e7e7;
+}
+.navbar{
+  display: flex;
+  height: 50px;
+  max-width: 1020px;
+  margin:auto;
+}
+.logo{
+  height: 50px;
+  width: 200px;
+  //background-color: #204d74;
+  float: left;
+}
+a{
+  color: $btn_primary1;
+  text-decoration: none;
+  margin: auto;
+
+}

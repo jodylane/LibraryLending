@@ -19,6 +19,7 @@
   }
 }
 @mixin search(){
+  width:89%;
   margin: 8px 0;
   border-radius: 4px 0 0 4px;
   padding: 8px 12px;
@@ -29,6 +30,7 @@
   }
 }
 @mixin search-btn(){
+  width:5%;
   margin: 8px 0 8px -4.2px;
   padding: 6.5px 12px 8px 12px;
   font-size: 14px;
