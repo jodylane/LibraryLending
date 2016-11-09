@@ -18,3 +18,5 @@
   <p class="copyright">All content copyright 2016</p>
 
 </footer>
+</body>
+</html>
