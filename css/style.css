@@ -1,127 +1,52 @@
-* {
-  margin: 0;
-  padding: 0; }
+/*
+Error: It's not clear which file to import for '@import "header"'.
+       Candidates:
+         header.sass
+         header.scss
+       Please delete or rename all but one of these files.
+        on line 4 of C:\MAMP\htdocs\i210\LibraryLending\sass\style.scss
 
-body, html {
-  height: 100%; }
+1: @import "variables";
+2: @import "mixins";
+3: @import "structure";
+4: @import "header";
 
-body {
-  overflow-x: hidden; }
-
-html {
-  font-size: 14px;
-  font-family: sans-serif;
-  line-height: 1.428; }
-
-h1, h2, h3, h4, h5, h6, p {
-  margin-bottom: 20px; }
-
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  font-size: 12px; }
-
-.search-input {
-  margin: 8px 0;
-  border-radius: 4px 0 0 4px;
-  padding: 8px 12px;
-  border: 1.5px solid #ccc;
-  border-shadow: inset 0 1px 1px; }
-  .search-input:focus {
-    box-shadow: 0px 0px 8px 0.5px #337ab7; }
-
-.btn-search {
-  margin: 8px 0 8px -4.2px;
-  padding: 6.5px 12px 8px 12px;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 0 4px 4px 0;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc; }
-  .btn-search:hover {
-    background-color: #e6e6e6;
-    border-color: #adadad; }
-
-.input {
-  margin: 8px 0;
-  border-radius: 4px;
-  padding: 8px 12px;
-  border: 1.5px solid #ccc;
-  border-shadow: inset 0 1px 1px; }
-  .input:focus {
-    box-shadow: 0px 0px 8px 0.5px #337ab7; }
-
-.btn {
-  margin: 8px 0;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 4px; }
-
-.btn-primary {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
-  .btn-primary:hover {
-    background-color: #286090;
-    border-color: #204d74; }
-
-.btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc; }
-  .btn-default:hover {
-    background-color: #e6e6e6;
-    border-color: #adadad; }
-
-.btn-success {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c; }
-  .btn-success:hover {
-    background-color: #449d44;
-    border-color: #398439; }
-
-.btn-info {
-  color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da; }
-  .btn-info:hover {
-    background-color: #31b0d5;
-    border-color: #269abc; }
-
-.btn-warning {
-  color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236; }
-  .btn-warning:hover {
-    background-color: #ec971f;
-    border-color: #d58512; }
-
-.btn-danger {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a; }
-  .btn-danger:hover {
-    background-color: #c9302c;
-    border-color: #ac2925; }
+Backtrace:
+C:\MAMP\htdocs\i210\LibraryLending\sass\style.scss:4
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:18:in `load'
+C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: It's not clear which file to import for '@import \"header\"'.\A        Candidates:\A          header.sass\A          header.scss\A        Please delete or rename all but one of these files.\A         on line 4 of C:\MAMP\htdocs\i210\LibraryLending\sass\style.scss\A \A 1: @import \"variables\";\A 2: @import \"mixins\";\A 3: @import \"structure\";\A 4: @import \"header\";"; }

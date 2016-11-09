@@ -4,9 +4,13 @@
  * Date: 11/5/2016
  * Description: This file was created to be used as the about page
  */
+include "includes/header.php";
+include "includes/database.php";
+
+
 ?>
 
-<?php include "includes/header.php"; ?>
+
 
 <section class="about-section">
 
