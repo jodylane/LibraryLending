@@ -38,6 +38,7 @@ include "includes/database.php";
 
     </table>
 
+
 </section>
 
 <?php include "includes/footer.php"; ?>

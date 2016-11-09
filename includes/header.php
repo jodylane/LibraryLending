@@ -27,7 +27,8 @@
   <h2 class="headline">Best source for knowledge<h2>
 
   <form>
-    <input class="search" type="text" name="search" placeholder=" Search...">
+    <input class="search-input" type="text" name="search" placeholder=" Search for...">
+    <span class="btn-search">Go!</span>
   </form>
 
   <p class="sub-headline">there are a lot of books here, search for them because there's a lot</p>

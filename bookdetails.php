@@ -63,7 +63,17 @@ if (!$query) {
             <p><?= $row['description'] ?></p>
         </td>
     </tr>
+    <tr>
+        <td></td>
+        <td>
+            <a href="booklist.php"><button href="booklist.php" class="btn btn-danger">Cancel</button></a>
+        </td>
+        <td>
+            <a href="checkout.php"><button class="btn btn-success right">Add to Cart</button></a>
+        </td>
+    </tr>
 </table>
+
 <?php
 include "includes/footer.php"
 ?>

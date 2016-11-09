@@ -39,13 +39,14 @@ h6 {
   border-radius: 4px 0 0 4px;
   padding: 8px 12px;
   border: 1.5px solid #ccc;
-  border-shadow: inset 0 1px 1px; }
+  border-shadow: inset 0 1px 1px;
+  width: 400px; }
   .search-input:focus {
     box-shadow: 0px 0px 8px 0.5px #337ab7; }
 
 .btn-search {
-  margin: 8px 0 8px -4.2px;
-  padding: 6.5px 12px 8px 12px;
+  margin: 8px 0 8px -8.2px;
+  padding: 6px 12px 8px 12px;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -210,7 +211,6 @@ code, kbd, pre, samp {
 
 button, input, optgroup, select, textarea {
   color: inherit;
-  font: inherit;
   margin: 0; }
 
 button {
@@ -319,14 +319,6 @@ nav a {
 
 form {
   text-align: center; }
-  form input {
-    width: 500px;
-    border: 3.4px solid #ccc;
-    border-radius: 4px; }
-    form input .search {
-      box-sizing: border-box;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px; }
 
 .sub-headline {
   text-align: center;
@@ -445,6 +437,9 @@ footer {
 .booklist-table {
   border-collapse: collapse;
   width: 100%; }
+  .booklist-table a {
+    color: #337ab7;
+    text-decoration: none; }
 
 th, td {
   padding: 15px; }
@@ -466,8 +461,8 @@ table.bookdetails td.col1 {
   width: 180px; }
 
 table.bookdetails td img {
-  width: 350px;
-  height: 500px; }
+  width: 200px;
+  height: auto; }
 
 table.bookdetails td.col2 {
   width: 120px; }
@@ -482,3 +477,9 @@ table.bookdetails td.col4 {
 table.bookdetails td.col4 img {
   border: none;
   width: 100px; }
+
+.right {
+  float: right; }
+
+.see {
+  background-color: red; }

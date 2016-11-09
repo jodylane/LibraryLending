@@ -36,6 +36,7 @@ h6 {
 }
 .search-input{
   @include search();
+  width: 400px;
 }
 .btn-search{
   @include search-btn();
