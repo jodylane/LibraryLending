@@ -17,7 +17,7 @@
         <?php
 
         while (($row = $query->fetch_assoc()) !== NULL) {
-            echo "<a href='' class='book_thumb'>";
+            echo "<a class='book_thumb' href='bookdetails.php?book_id=", $row['book_id'], "'>";
             echo "<div class='book-overlay'>";
             echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
             echo "</div></a>";
