@@ -6,11 +6,7 @@
  */
 include "includes/header.php";
 include "includes/database.php";
-
-
 ?>
-
-
 
 <section class="about-section">
 

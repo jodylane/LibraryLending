@@ -17,8 +17,8 @@
 <header>
 
   <nav>
-    <span><a href="">Sign In/Sign Up</a></span>
-    <a href="">Cart</a>
+    <span><a href="#">Sign In/Sign Up</a></span>
+    <a href="#">Cart</a>
     <a href="booklist.php">Book List</a>
     <a href="about.php">About</a>
     <a href="index.php">Home</a>

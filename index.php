@@ -8,7 +8,6 @@
 include "includes/header.php";
 include "includes/database.php";
 
-
 // Selection from books table sort by title ascending
 $sql = "SELECT title,image_link,book_id FROM books LIMIT 2";
 

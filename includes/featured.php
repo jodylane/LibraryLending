@@ -15,15 +15,12 @@
     <!-- book thumbnails -->
     <div class="bookthumb-container">
         <?php
-
         while (($row = $query->fetch_assoc()) !== NULL) {
             echo "<a class='book_thumb' href='bookdetails.php?book_id=", $row['book_id'], "'>";
             echo "<div class='book-overlay'>";
             echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
             echo "</div></a>";
         }
-
         ?>
     </div>
-
 </section>

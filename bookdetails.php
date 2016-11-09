@@ -42,7 +42,7 @@ if (!$query) {
 <table class="bookdetails">
     <tr>
         <td>
-            <?= "<img src='assets/book_covers/", $row['image_link'], "'/>";?>
+            <?= "<img src='assets/book_covers/", $row['image_link'], "'/>"; ?>
         </td>
         <td>
             <h4>Title:</h4>
