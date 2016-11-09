@@ -1,3 +1,109 @@
-.class{
-  color:$color;
+*{
+  margin: 0;
+  padding: 0;
+}
+body,html{
+  height: 100%;
+}
+body{
+  overflow-x: hidden;
+}
+html{
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.428;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 12px;
+}
+.search-input{
+  @include search();
+}
+.btn-search{
+  @include search-btn();
+  color: $btn_default2;
+  background-color: $btn_white;
+  border-color: $btn_default1;
+  &:hover{
+    background-color: $btn_default_hover1;
+    border-color: $btn_default_hover2;
+  }
+}
+.input{
+  @include input();
+}
+.btn{
+  @include btn();
+}
+.btn-primary{
+  color: $btn_white;
+  background-color: $btn_primary1;
+  border-color: $btn_primary2;
+  &:hover{
+    background-color: $btn_primary_hover1;
+    border-color: $btn_primary_hover2;
+  }
+}
+.btn-default{
+  color: $btn_default2;
+  background-color: $btn_white;
+  border-color: $btn_default1;
+  &:hover{
+    background-color: $btn_default_hover1;
+    border-color: $btn_default_hover2;
+  }
+}
+.btn-success{
+  color: $btn_white;
+  background-color: $btn_success1;
+  border-color: $btn_success2;
+  &:hover{
+    background-color: $btn_success_hover1;
+    border-color: $btn_success_hover2;
+  }
+}
+.btn-info{
+  color: $btn_white;
+  background-color: $btn_info1;
+  border-color: $btn_info2;
+  &:hover{
+    background-color: $btn_info_hover1;
+    border-color: $btn_info_hover2;
+  }
+}
+.btn-warning{
+  color: $btn_white;
+  background-color: $btn_warning1;
+  border-color: $btn_warning2;
+  &:hover{
+    background-color: $btn_warning_hover1;
+    border-color: $btn_warning_hover2;
+  }
+}
+.btn-danger{
+  color: $btn_white;
+  background-color: $btn_danger1;
+  border-color: $btn_danger2;
+  &:hover{
+    background-color: $btn_danger_hover1;
+    border-color: $btn_danger_hover2;
+  }
 }
