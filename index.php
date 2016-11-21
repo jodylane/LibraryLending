@@ -28,8 +28,3 @@ include "includes/featured.php";
 
 include "includes/footer.php";
 ?>
-
-
-
-
-
