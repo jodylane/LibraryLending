@@ -69,6 +69,12 @@ if (!$query) {
             <a href="booklist.php"><button href="booklist.php" class="btn btn-danger">Cancel</button></a>
         </td>
         <td>
+            <a href="editbookdetails.php?book_id=<?= $row['book_id']?>"><button class="btn btn-info">Modify</button></a>
+        </td>
+        <td>
+            <a href="deletebook.php?book_id=<?= $row['book_id']?>"><button class="btn btn-danger">Delete Book</button></a>
+        </td>
+        <td>
             <a href="checkout.php"><button class="btn btn-success right">Add to Cart</button></a>
         </td>
     </tr>
