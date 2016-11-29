@@ -22,10 +22,8 @@ $book_id = filter_input(INPUT_GET,'book_id',FILTER_SANITIZE_NUMBER_INT);
 $sql = "SELECT * FROM books WHERE book_id=" . $book_id;
 
 // execute the query
-$query = $conn->query($sql);
+$query = @$conn->query($sql);
 
-//retrieve results
-$row = $query->fetch_assoc();
 
 //Handle selection errors
 if (!$query) {
@@ -37,12 +35,22 @@ if (!$query) {
     require_once ('includes/footer.php');
     exit;
 }
+
+//retrieve results
+$row = $query->fetch_assoc();
 ?>
 <form action="modifybook.php" method="post">
     <table class="bookdetails" >
         <tr>
             <td>
-                <?= "<img src='assets/book_covers/", $row['image_link'], "'/>"; ?>
+                <?php
+                if(strlen($row['image_link']) == 0){
+                    echo "<img src='assets/book_covers/no_cover.gif'/>";
+                }
+                else{
+                    echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
+                }
+                ?>
             </td>
             <td>
                 <h4>Title:</h4>

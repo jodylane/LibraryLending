@@ -42,7 +42,14 @@ if (!$query) {
 <table class="bookdetails">
     <tr>
         <td>
-            <?= "<img src='assets/book_covers/", $row['image_link'], "'/>"; ?>
+            <?php
+            if(strlen($row['image_link']) == 0){
+                echo "<img src='assets/book_covers/no_cover.gif'/>";
+            }
+            else{
+                echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
+            }
+            ?>
         </td>
         <td>
             <h4>Title:</h4>
