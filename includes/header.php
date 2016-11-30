@@ -4,6 +4,17 @@
  * Date: 11/5/2016
  * Description: This file was created to be used as the header section
  */
+if (session_status() == PHP_SESSION_NONE){
+  session_start();
+}
+$count = 0;
+// retrieve cart content
+if(isset($_SESSION['cart'])){
+  $cart = $_SESSION['cart'];
+  if($cart){
+    $count = array_sum($cart);
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +29,7 @@
 
   <nav>
     <span><a href="#">Sign In/Sign Up</a></span>
-    <a href="#">Cart</a>
+    <a href="showcart.php">Cart(<?= $count?>)</a>
     <a href="booklist.php">Book List</a>
     <a href="about.php">About</a>
     <a href="index.php">Home</a>
