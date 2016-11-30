@@ -13,6 +13,11 @@ if (session_status() == PHP_SESSION_NONE){
 $_SESSION['cart'] = "";
 require_once 'includes/header.php';
 ?>
-<h2>Checkout</h2>
-<p>Thank you for shopping with us. Your business is greatly appreciated. You will be notified once your items are shipped</p>
+<section class="book-list">
+    <h2 class="booklist-headline">Checkout</h2>
+    <p class="checkout">Thank you for shopping with us. Your business is greatly appreciated. You will be notified once your items are shipped</p>
+    <br>
+    <br>
+</section>
+
 <?php include ('includes/footer.php') ?>
