@@ -38,11 +38,12 @@ include "includes/database.php";
 
     </table>
 
-    <a href="addbook.php">Add a new Book</a>
+    <a href="addbook.php"><button class="btn btn-success">Add a new Book</button></a>
 <br>
 <br>
 </section>
 
 <?php include "includes/footer.php"; ?>
+
 
 
