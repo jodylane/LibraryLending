@@ -12,6 +12,10 @@ include "includes/database.php";
 
     <h2 class="about">About Library Lending</h2>
 
+    <div class="about-img">
+      
+    </div>
+
     <p class="about-description">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -25,4 +29,3 @@ include "includes/database.php";
 </section>
 
 <?php include "includes/footer.php"; ?>
-
