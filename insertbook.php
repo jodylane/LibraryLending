@@ -10,7 +10,7 @@
 require_once('includes/header.php');
 require_once('includes/database.php');
 
-//if the script did not received post data, display an error message and then terminite the script immediately
+//if the script did not receive post data, display an error message and then terminite the script immediately
 if (!filter_has_var(INPUT_POST, 'title') ||
     !filter_has_var(INPUT_POST, 'author') ||
     !filter_has_var(INPUT_POST, 'isbn') ||
@@ -25,8 +25,6 @@ if (!filter_has_var(INPUT_POST, 'title') ||
     $conn->close();
     die();
 }
-
-//add your code here
 
 $title = trim(filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING));
 $isbn = trim(filter_input(INPUT_POST, "isbn", FILTER_SANITIZE_NUMBER_INT));
@@ -71,6 +69,20 @@ if (!$query) {
 
 //determine the id of the newly added book
 $id = $conn->insert_id;
+
+//create an inventory item
+$inventory_sql = "INSERT INTO inventory (book_id) VALUES ($id);";
+
+$inventory_query = @$conn->query($inventory_sql);
+
+if (!$inventory_query) {
+    $errno = $conn->errno;
+    $error = $conn->error;
+    $conn->close();
+    echo "Insert query failed: ($errno) $error.";
+    require 'includes/footer.php';
+    die();
+}
 
 // close the connection.
 $conn->close();
