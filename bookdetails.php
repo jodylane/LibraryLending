@@ -81,7 +81,7 @@ if (!$query) {
         <button href="booklist.php" class="btn btn-danger">Cancel</button>
     </a>
     <?php
-    if ($_SESSION['admin'] = 1) {
+    if ($admin == 1) {
         echo "<a href='editbookdetails.php?book_id=" . $row['book_id'] . "'>";
         echo "<button class='btn btn-info'>Modify</button>";
         echo "</a>";
@@ -92,7 +92,7 @@ if (!$query) {
         echo "<button class='btn btn-success right'>Add to Cart</button>";
         echo "</a>";
     }
-    else{
+    else if($firstname !=""){
         echo "<a href='addtocart.php?book_id=" . $row['book_id'] . "'>";
         echo "<button class='btn btn-success right'>Add to Cart</button>";
         echo "</a>";

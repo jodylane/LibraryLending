@@ -30,7 +30,7 @@ include "includes/database.php";
 
         </div>
 
-        <input type="submit" value="Submit" id="input-submit">
+        <input type="submit" value="Submit" class="btn btn-default">
 
       </form>
 
