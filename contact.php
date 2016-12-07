@@ -18,9 +18,9 @@ include "includes/database.php";
 
         <div class="message">
 
-          <input class="input" type="text" id="input-name" placeholder="Name" required>
-          <input class="input" type="email" id="input-email" placeholder="Email address" required>
-          <input class="input" type="text" id="input-subject" placeholder="Subject" required>
+          <input class="input" name="name" type="text" id="input-name" placeholder="Name" required>
+          <input class="input" name="email" type="email" id="input-email" placeholder="Email address" required>
+          <input class="input" name="subject" type="text" id="input-subject" placeholder="Subject" required>
 
         </div>
 

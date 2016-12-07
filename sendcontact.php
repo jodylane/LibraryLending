@@ -9,10 +9,10 @@
 require_once('includes/header.php');
 
 //if the script did not received post data, display an error message and then terminite the script immediately
-if (!filter_has_var(INPUT_POST, 'input-name') ||
-    !filter_has_var(INPUT_POST, 'input-email') ||
-    !filter_has_var(INPUT_POST, 'input-subject') ||
-    !filter_has_var(INPUT_POST, 'input-message')
+if (!filter_has_var(INPUT_POST, 'name') ||
+    !filter_has_var(INPUT_POST, 'email') ||
+    !filter_has_var(INPUT_POST, 'subject') ||
+    !filter_has_var(INPUT_POST, 'message')
 ) {
 
     echo "You're missing something.";
@@ -23,9 +23,9 @@ if (!filter_has_var(INPUT_POST, 'input-name') ||
 }
 
 $name = trim(filter_input(INPUT_POST, "name", FILTER_SANITIZE_STRING));
-$email = trim(filter_input(INPUT_POST, "input-email", FILTER_SANITIZE_EMAIL));
-$subject = trim(filter_input(INPUT_POST, "input-subject", FILTER_SANITIZE_STRING));
-$message = trim(filter_input(INPUT_POST, "input-message", FILTER_SANITIZE_STRING));
+$email = trim(filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL));
+$subject = trim(filter_input(INPUT_POST, "subject", FILTER_SANITIZE_STRING));
+$message = trim(filter_input(INPUT_POST, "message", FILTER_SANITIZE_STRING));
 
 
 echo "Message validated.";
