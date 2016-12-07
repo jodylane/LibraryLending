@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Nov 09, 2016 at 03:43 AM
+-- Generation Time: Dec 07, 2016 at 09:02 AM
 -- Server version: 5.5.41-log
 -- PHP Version: 5.6.8
 
@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `books` (
 --
 
 INSERT INTO `books` (`book_id`, `title`, `author`, `isbn`, `image_link`, `genre`, `description`, `publisher`, `publication_date`) VALUES
-(1, 'The Fellowship of the Ring', 'J.R.R. Tolkien', '0345339703', 'LotR_Fellowship_Cover.jpg', 'Fantasy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Allen & Unwin', '1954-07-29'),
-(2, 'Harry Potter and the Philosopher''s Stone', 'J.K. Rowling', '9780545582289', 'HP_Sorcerors_Cover.jpg', 'Fantasy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Scholastic', '1998-09-01'),
+(1, 'The Lord of the Rings: The Fellowship of the Ring', 'J.R.R. Tolkien', '0345339703', 'LotR_Fellowship_Cover.jpg', 'Fantasy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Allen & Unwin', '1954-07-29'),
+(2, 'Harry Potter and the Sorcerer&#39;s Stone', 'J.K. Rowling', '9780545582289', 'HP_Sorcerors_Cover.jpg', 'Fantasy', 'Harry Potter is a wizard orphan.', 'Scholastic', '1998-09-01'),
 (3, 'The Lion, the Witch, and the Wardrobe', 'C.S. Lewis', '0064404994', 'CoN_Lion_Cover.jpg', 'Fantasy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Geoffrey Bles', '1950-10-16'),
 (4, 'Fahrenheit 451', 'Ray Bradbury', '1451673310', 'Fahrenheit451_Cover.jpg', 'Classic', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Ballantine Books', '1953-00-00'),
-(5, 'Redwall', 'Brian Jacques', '0142302376', 'Redwall_Cover.jpg', 'Fantasy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Philomel', '2007-10-04');
+(5, 'Redwall', 'Brian Jacques', '0142302376', 'Redwall_Cover.jpg', 'Fantasy', 'Pretty good', 'Philomel', '2007-10-04');
 
 -- --------------------------------------------------------
 
@@ -91,19 +91,25 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_name` varchar(50) NOT NULL,
   `first_name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
-  `user_email` varchar(200) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `user_email` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `first_name`, `last_name`, `user_email`) VALUES
-(1, 'lukebrown', 'Luke', 'Brown', 'lukbrown@iupui.edu'),
-(2, 'bookfan0001', 'Bill', 'Smith', 'bsmith@example.com'),
-(3, 'ilovebooks', 'Sarah', 'Wood', 'swood@example.com'),
-(4, 'reedread', 'Taylor', 'Reed', 'reedreader@example.com'),
-(5, 'marklibrary', 'Mark', 'Jackson', 'mjack@example.com');
+INSERT INTO `users` (`user_id`, `user_name`, `first_name`, `last_name`, `user_email`, `password`, `is_admin`) VALUES
+(1, 'lukebrown', 'Luke', 'Brown', 'lukbrown@iupui.edu', 'password', 1),
+(2, 'bookfan0001', 'Bill', 'Smith', 'bsmith@example.com', 'password', 0),
+(3, 'ilovebooks', 'Sarah', 'Wood', 'swood@example.com', 'password', 0),
+(4, 'reedread', 'Taylor', 'Reed', 'reedreader@example.com', 'password', 0),
+(5, 'marklibrary', 'Mark', 'Jackson', 'mjack@example.com', 'password', 0),
+(6, 'taeadsf', 'Luke', 'Brown', 'lukbrown@iupui.edu', 'password', 0),
+(10, 'jodylane', 'Josh', 'Lane', 'jodylane@umail.iu.edu', 'jodylane', 1),
+(11, 'hnw0414', 'Hannah', 'Woodall', 'hnw0414@gmail.com', 'password', 0),
+(12, 'jay', 'jay', 'jay', 'jay@yahoo.com', 'password', 0);
 
 --
 -- Indexes for dumped tables
@@ -145,7 +151,7 @@ MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
