@@ -22,7 +22,7 @@ if (!filter_has_var(INPUT_GET, 'book_id')) {
 
 $book_id = trim(filter_input(INPUT_GET, "book_id", FILTER_SANITIZE_NUMBER_INT));
 
-$sql ="DELETE FROM books WHERE book_id = $book_id;";
+$sql ="DELETE FROM books WHERE book_id = $book_id";
 
 $query = @$conn->query($sql);
 

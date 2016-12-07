@@ -78,10 +78,10 @@ $row = $query->fetch_assoc();
         <tr>
             <td></td>
             <td>
-                <a href="booklist.php"><button href="booklist.php" class="btn btn-danger">Cancel</button></a>
+                <a href="bookdetails.php?book_id=<?= $book_id ?>"><button type="button" class="btn btn-danger">Cancel</button></a>
             </td>
             <td>
-                <a href="checkout.php"><button class="btn btn-success right">Submit</button></a>
+                <input type="submit" class="btn btn-success" value="Update">
             </td>
         </tr>
     </table>

@@ -77,7 +77,7 @@ $_SESSION['user_id'] = $user_id;
 $_SESSION['is_admin'] = $admin;
 
 echo "<section class='message'>";
-echo "<h3>Successfully logged in to Lending Library," . $_SESSION['first_name'] . ".</h3>";
+echo "<h3>Successfully logged in to Lending Library, " . $_SESSION['first_name'] . ".</h3>";
 echo "<a href='index.php'>Return Home</a>";
 echo "</section>";
 

@@ -19,7 +19,7 @@ include "includes/database.php";
         <input required type="password" name="password" placeholder="Password" class="input">
 
         <a href="index.php">
-            <button type="button" href="index.php" class="btn btn-danger" formnovalidate>Cancel</button>
+            <button type="button" class="btn btn-danger" formnovalidate>Cancel</button>
         </a>
 
         <input type="submit" class="btn btn-success" value="Sign Up">

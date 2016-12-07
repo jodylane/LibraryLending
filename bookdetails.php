@@ -24,7 +24,7 @@ if (!filter_has_var(INPUT_GET, 'book_id')) {
 $book_id = filter_input(INPUT_GET, 'book_id', FILTER_SANITIZE_NUMBER_INT);
 
 //select statement
-$sql = "SELECT * FROM books WHERE book_id=" . $book_id;
+$sql = "SELECT title, description, books.book_id, author, genre, publisher, publication_date, isbn, image_link, item_id, count(is_available) AS num_copy FROM books, inventory WHERE books.book_id=" . $book_id . " AND inventory.book_id=" . $book_id . " AND is_available=1 GROUP BY title";
 
 // execute the query
 $query = $conn->query($sql);
@@ -65,7 +65,10 @@ if (!$query) {
             <h4>ISBN:</h4>
             <h4>Date:</h4>
             <h4>Publisher:</h4>
+            <h4>Available:</h4>
+            <h4>item:</h4>
             <h4>Description:</h4>
+
         </td>
         <td>
             <p><?= $row['title'] ?></p>
@@ -79,8 +82,11 @@ if (!$query) {
             <p><?= $row['publication_date'] ?></p>
 
             <p><?= $row['publisher'] ?></p>
+            <p><?= $row['num_copy'] ?></p>
+            <p><?= $row['item_id'] ?></p>
 
             <p><?= $row['description'] ?></p>
+
         </td>
     </tr>
 </table>
@@ -90,18 +96,18 @@ if (!$query) {
     </a>
     <?php
     if ($admin == 1) {
-        echo "<a href='editbookdetails.php?book_id=" . $row['book_id'] . "'>";
+        echo "<a href='editbookdetails.php?book_id=" . $book_id . "'>";
         echo "<button class='btn btn-info'>Modify</button>";
         echo "</a>";
-        echo "<a href='deletebook.php?book_id=" . $row['book_id'] . "'>";
+        echo "<a href='deletebook.php?book_id=" . $book_id . "'>";
         echo "<button class='btn btn-danger'>Delete Book</button>";
         echo "</a>";
-        echo "<a href='addtocart.php?book_id=" . $row['book_id'] . "'>";
+        echo "<a href='addtocart.php?book_id=" . $book_id . "&item_id=" . $row['item_id'] . "'>";
         echo "<button class='btn btn-success right'>Add to Cart</button>";
         echo "</a>";
     }
     else if($firstname !=""){
-        echo "<a href='addtocart.php?book_id=" . $row['book_id'] . "'>";
+        echo "<a href='addtocart.php?book_id=" . $book_id . "'>";
         echo "<button class='btn btn-success right'>Add to Cart</button>";
         echo "</a>";
     }
