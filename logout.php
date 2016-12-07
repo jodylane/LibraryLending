@@ -13,8 +13,9 @@ session_unset();
 setcookie(session_name(), '', time()-3600);
 //destroy the session
 session_destroy();
-
-echo "You have successfully signed out!";
+echo "<section class='message'>";
+echo "<h3>You have successfully signed out!</h3>";
 echo "<a href='index.php'>Return Home</a>";
+echo "</section>";
 require 'includes/footer.php';
 ?>

@@ -13,7 +13,7 @@ include "includes/database.php";
     <h2 class="about">About Library Lending</h2>
 
     <div class="about-img">
-      
+
     </div>
 
     <p class="about-description">

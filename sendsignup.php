@@ -17,9 +17,10 @@ if (!filter_has_var(INPUT_POST, 'username') ||
     !filter_has_var(INPUT_POST, 'email') ||
     !filter_has_var(INPUT_POST, 'password')
 ) {
-
-    echo "Something was not passed in.";
-    echo "<a href='signup.php'>Click here to return</a>";
+    echo "<section class='message'>";
+    echo "<h3>Something was not passed in.</h3>";
+    echo "<a href='signup.php'>Return to Sign Up</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -44,8 +45,10 @@ if(strlen($username) < 1 ||
     strlen($email) < 1 ||
     strlen($password) < 1
 ){
-    echo "Something was not passed in.";
-    echo "<a href='signup.php'>Click here to return</a>";
+    echo "<section class='message'>";
+    echo "<h3>Something was not passed in.</h3>";
+    echo "<a href='signup.php'>Return to Sign Up</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -59,7 +62,10 @@ if (!$query) {
     $errno = $conn->errno;
     $error = $conn->error;
     $conn->close();
-    echo "Create user failed: ($errno) $error.";
+    echo "<section class='message'>";
+    echo "<h3>Create user failed: ($errno) $error.</h3>";
+    echo "<p>Please try again...</p>";
+    echo "</section>";
     require 'includes/footer.php';
     die();
 }
@@ -74,6 +80,8 @@ $_SESSION['user_email'] = $email;
 $_SESSION['user_id'] = $id;
 $_SESSION['is_admin'] = 0;
 
-echo "Welcome to Lending Library, $firstname";
-echo "<p><a href='index.php'>Return to Home</a></p>";
+echo "<section class='message'>";
+echo "<h3>Welcome to Lending Library, $firstname</h3>";
+echo "<a href='index.php'>Return Home</a>";
+echo "</section>";
 require_once 'includes/footer.php';

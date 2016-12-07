@@ -15,8 +15,10 @@ if (!filter_has_var(INPUT_POST, 'name') ||
     !filter_has_var(INPUT_POST, 'message')
 ) {
 
-    echo "You're missing something.";
+    echo "<section class='message'>";
+    echo "<h3>You're missing something.</h3>";
     echo "<a href='contact.php'>Click here to return</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -27,7 +29,8 @@ $email = trim(filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL));
 $subject = trim(filter_input(INPUT_POST, "subject", FILTER_SANITIZE_STRING));
 $message = trim(filter_input(INPUT_POST, "message", FILTER_SANITIZE_STRING));
 
-
-echo "Message validated.";
+echo "<section class='message'>";
+echo "<h3>Message validated.</h3>";
 echo "<a href='index.php'>Click here to return</a>";
+echo "</section>";
 require_once 'includes/footer.php';

@@ -19,8 +19,10 @@ if (!filter_has_var(INPUT_POST, 'title') ||
     !filter_has_var(INPUT_POST, 'genre') ||
 //    !filter_has_var(INPUT_POST, 'image') ||
     !filter_has_var(INPUT_POST, 'description')) {
-
-    echo "There were problems retrieving book details. New book cannot be added.";
+    echo "<section class='message'>";
+    echo "There were problems retrieving book details. New book cannot be added.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -62,7 +64,10 @@ if (!$query) {
     $errno = $conn->errno;
     $error = $conn->error;
     $conn->close();
-    echo "Insert query failed: ($errno) $error.";
+    echo "<section class='message'>";
+    echo "Insert query failed: ($errno) $error.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     require 'includes/footer.php';
     die();
 }
@@ -79,7 +84,11 @@ if (!$inventory_query) {
     $errno = $conn->errno;
     $error = $conn->error;
     $conn->close();
-    echo "Insert query failed: ($errno) $error.";
+    echo "<section class='message'>";
+    echo "<h3>Insert query failed: ($errno) $error.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
+
     require 'includes/footer.php';
     die();
 }
@@ -88,6 +97,9 @@ if (!$inventory_query) {
 $conn->close();
 
 //display a confirmation message and a link to display details of the new book
-echo "You have successfully inserted the new book into the database.";
-echo "<p><a href='bookdetails.php?book_id=$id'>Book Details</a></p>";
+echo "<section class='message'>";
+echo "<h3>You have successfully inserted the new book into the database.</h3>";
+echo "<a href='bookdetails.php?book_id=$id'>Book Details</a>";
+echo "</section>";
+
 require_once 'includes/footer.php';

@@ -19,8 +19,10 @@ if (!filter_has_var(INPUT_POST, 'book_id') ||
     !filter_has_var(INPUT_POST, 'publisher') ||
     !filter_has_var(INPUT_POST, 'genre') ||
     !filter_has_var(INPUT_POST, 'description')) {
-
-    echo "There were problems retrieving book details. Book cannot be modified.";
+    echo "<section class='message'>";
+    echo "<h3>There were problems retrieving book details. Book cannot be modified.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -65,7 +67,10 @@ if (!$query) {
     $errno = $conn->errno;
     $error = $conn->error;
     $conn->close();
-    echo "Update query failed: ($errno) $error.";
+    echo "<section class='message'>";
+    echo "<h3>Update query failed: ($errno) $error.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     require 'includes/footer.php';
     die();
 }
@@ -74,6 +79,9 @@ if (!$query) {
 $conn->close();
 
 //display a confirmation message and a link to display details of the book.
-echo "You have successfully modified the book.";
-echo "<p><a href='bookdetails.php?book_id=$book_id'>Book Details</a></p>";
+echo "<section class='message'>";
+echo "<h3>You have successfully modified the book.</h3>";
+echo "<a href='bookdetails.php?book_id=$book_id'>Book Details</a>";
+echo "</section>";
+
 require_once 'includes/footer.php';

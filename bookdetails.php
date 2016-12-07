@@ -11,7 +11,11 @@ include "includes/database.php";
 
 //checks to see if id was passed if no id is found display error exit code
 if (!filter_has_var(INPUT_GET, 'book_id')) {
-    echo "Error: book id was not found.";
+    echo "<section class='message'>";
+    echo "<h3>Error: book id was not found.</h3>";
+    echo "<a href='booklist.php'>Return Home</a>";
+    echo "</section>";
+
     require_once('includes/footer.php');
     exit();
 }
@@ -33,6 +37,10 @@ if (!$query) {
     $errno = $conn->errno;
     $errmsg = $conn->error;
     echo "Selection failed with: ($errno) $errmsg<br/>\n";
+    echo "<section class='message'>";
+    echo "<h3>Selection failed with: ($errno) $errmsg</h3>";
+    echo "<a href='booklist.php'>Return Home</a>";
+    echo "</section>";
     $conn->close();
     //include the footer
     require_once('includes/footer.php');

@@ -11,7 +11,10 @@ require_once('includes/database.php');
 if(filter_has_var(INPUT_GET,'terms')){
     $terms_str = filter_input(INPUT_GET,'terms',FILTER_SANITIZE_STRING);
 }else{
-    echo "There were no search terms found.";
+    echo "<section class='message'>";
+    echo "<h3>There were no search terms found.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     include 'includes/footer.php';
     exit;
 }
@@ -26,14 +29,20 @@ $query = $conn->query($sql);
 if(!$query){
     $errno = $conn->errno;
     $errmsg = $conn->error;
-    echo "Selection failed with: ($errno) $errmsg";
+    echo "<section class='message'>";
+    echo "<h3>Selection failed with: ($errno) $errmsg</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     $conn->close();
     include 'includes/footer.php';
     exit;
 }
 
 if($query->num_rows == 0){
-    echo "Your search <i>$term_str</i> did not match any books in our inventory";
+    echo "<section class='message'>";
+    echo "<h3>Your search <i>$term_str</i> did not match any books in our inventory.</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     include 'includes/footer.php';
     exit;
 }

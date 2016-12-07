@@ -9,7 +9,12 @@
 require_once 'includes/header.php';
 require_once 'includes/database.php';
 if(!isset($_SESSION['cart']) || !$_SESSION['cart']){
-    echo "Your shopping cart is empty.";
+    echo "<section class='message'>";
+    echo "<h3>Your shopping cart is empty.</h3>";
+    echo "<p>Add a book to your shopping cart</p>";
+    echo "<a href='booklist.php'>View Books</a>";
+    echo "</section>";
+
     require_once 'includes/footer.php';
     exit;
 }

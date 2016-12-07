@@ -18,7 +18,10 @@ $query = $conn->query($sql);
 if (!$query) {
     $errno = $conn->connect_errno;
     $errmsg = $conn->connect_error;
-    echo "Selection failed with: ($errno) $errmsg<br/>\n";
+    echo "<section class='message'>";
+    echo "<h3>Selection failed with: ($errno) $errmsg\n</h3>";
+    echo "<a href='index.php'>Return Home</a>";
+    echo "</section>";
     $conn->close();
     require_once ('includes/footer.php');
     exit;

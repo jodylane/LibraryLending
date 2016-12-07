@@ -13,9 +13,10 @@ require_once('includes/database.php');
 if (!filter_has_var(INPUT_POST, 'username') ||
     !filter_has_var(INPUT_POST, 'password')
 ) {
-
-    echo "Please go back and include a username and password";
-    echo "<a href='login.php'>Click here to return</a>";
+    echo "<section class='message'>";
+    echo "<h3>Please go back and include a username and password.</h3>";
+    echo "<a href='login.php'>Return to Login</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -31,8 +32,10 @@ if(strlen($username) < 1 ||
     strlen($password) < 1
 ){
 
-    echo "Please go back and include a username and password";
-    echo "<a href='login.php'>Click here to return</a>";
+    echo "<section class='message'>";
+    echo "<h3>Please go back and include a username and password.</h3>";
+    echo "<a href='login.php'>Return to Login</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -47,8 +50,10 @@ $query = @$conn->query($sql);
 $row = $query->fetch_assoc();
 
 if(!$row){
-    echo "Invalid username or password";
-    echo "<a href='login.php'>Click here to return</a>";
+    echo "<section class='message'>";
+    echo "<h3>Invalid username or password.</h3>";
+    echo "<a href='login.php'>Return to Login</a>";
+    echo "</section>";
     require_once 'includes/footer.php';
     $conn->close();
     die();
@@ -70,6 +75,10 @@ $_SESSION['user_name'] = $username;
 $_SESSION['user_email'] = $email;
 $_SESSION['user_id'] = $user_id;
 $_SESSION['is_admin'] = $admin;
-echo "Successfully logged in to Lending Library, " , $_SESSION['first_name'];
-echo "<p><a href='index.php'>Return to Home</a></p>";
+
+echo "<section class='message'>";
+echo "<h3>Successfully logged in to Lending Library," . $_SESSION['first_name'] . ".</h3>";
+echo "<a href='index.php'>Return Home</a>";
+echo "</section>";
+
 require_once 'includes/footer.php';
