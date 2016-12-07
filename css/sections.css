@@ -1,3 +1,10 @@
+/*buttons*/
+/*default button colors*/
+/*primary button colors*/
+/*success button colors*/
+/*info button colors*/
+/*warning button colors*/
+/*danger button colors*/
 * {
   margin: 0;
   padding: 0; }
@@ -433,7 +440,7 @@ footer {
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 0px;
-  height: 600px; }
+  height: auto; }
 
 .booklist-headline {
   padding-bottom: 25px;
@@ -500,6 +507,12 @@ table.bookdetails td.col4 img {
 
 .see {
   background-color: red; }
+
+.details-holder {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; }
 
 .contact {
   height: 500px;
@@ -609,4 +622,22 @@ table.bookdetails td.col4 img {
     top: 1px;
     outline: none; }
 
-/*# sourceMappingURL=sections.css.map */
+.btn-holder {
+  width: 200px;
+  margin: 0 auto; }
+
+.right {
+  float: right; }
+
+.showcart {
+  height: auto;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 0; }
+
+.checkout {
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+  color: black; }
