@@ -604,9 +604,7 @@ table.bookdetails td.col4 img {
     outline: none; }
 
 .sign-up-button {
-  position: relative;
-  vertical-align: top;
-  width: 100%;
+  width: 50%;
   height: 54px;
   padding: 0;
   font-size: 22px;
@@ -641,3 +639,5 @@ table.bookdetails td.col4 img {
   margin: auto;
   text-transform: uppercase;
   color: black; }
+
+/*# sourceMappingURL=sections.css.map */
