@@ -60,8 +60,16 @@ $user_id = $row['user_id'];
 $firstname = $row['first_name'];
 $lastname = $row['last_name'];
 $username = $row['user_name'];
-$email = $row['email'];
+$email = $row['user_email'];
+$admin = $row['is_admin'];
 
-echo "Successfully logged in to Lending Library, $firstname";
+//start session
+$_SESSION['first_name'] = $firstname;
+$_SESSION['last_name'] = $lastname;
+$_SESSION['user_name'] = $username;
+$_SESSION['user_email'] = $email;
+$_SESSION['user_id'] = $user_id;
+$_SESSION['is_admin'] = $admin;
+echo "Successfully logged in to Lending Library, " , $_SESSION['first_name'];
 echo "<p><a href='index.php'>Return to Home</a></p>";
 require_once 'includes/footer.php';

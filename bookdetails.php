@@ -39,60 +39,69 @@ if (!$query) {
     exit;
 }
 ?>
-    <table class="bookdetails">
-        <tr>
-            <td>
-                <?php
-                if (strlen($row['image_link']) == 0) {
-                    echo "<img src='assets/book_covers/no_cover.gif'/>";
-                } else {
-                    echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
-                }
-                ?>
-            </td>
-            <td>
-                <h4>Title:</h4>
-                <h4>Author:</h4>
-                <h4>Genre:</h4>
-                <h4>ISBN:</h4>
-                <h4>Date:</h4>
-                <h4>Publisher:</h4>
-                <h4>Description:</h4>
-            </td>
-            <td>
-                <p><?= $row['title'] ?></p>
+<table class="bookdetails">
+    <tr>
+        <td>
+            <?php
+            if (strlen($row['image_link']) == 0) {
+                echo "<img src='assets/book_covers/no_cover.gif'/>";
+            } else {
+                echo "<img src='assets/book_covers/", $row['image_link'], "'/>";
+            }
+            ?>
+        </td>
+        <td>
+            <h4>Title:</h4>
+            <h4>Author:</h4>
+            <h4>Genre:</h4>
+            <h4>ISBN:</h4>
+            <h4>Date:</h4>
+            <h4>Publisher:</h4>
+            <h4>Description:</h4>
+        </td>
+        <td>
+            <p><?= $row['title'] ?></p>
 
-                <p><?= $row['author'] ?></p>
+            <p><?= $row['author'] ?></p>
 
-                <p><?= $row['genre'] ?></p>
+            <p><?= $row['genre'] ?></p>
 
-                <p><?= $row['isbn'] ?></p>
+            <p><?= $row['isbn'] ?></p>
 
-                <p><?= $row['publication_date'] ?></p>
+            <p><?= $row['publication_date'] ?></p>
 
-                <p><?= $row['publisher'] ?></p>
+            <p><?= $row['publisher'] ?></p>
 
-                <p><?= $row['description'] ?></p>
-            </td>
-        </tr>
-    </table>
-    <div class="details-holder">
-        <a href="booklist.php">
-            <button href="booklist.php" class="btn btn-danger">Cancel</button>
-        </a>
+            <p><?= $row['description'] ?></p>
+        </td>
+    </tr>
+</table>
+<div class="details-holder">
+    <a href="booklist.php">
+        <button href="booklist.php" class="btn btn-danger">Cancel</button>
+    </a>
+    <?php
+    if ($_SESSION['admin'] = 1) {
+        echo "<a href='editbookdetails.php?book_id=" . $row['book_id'] . "'>";
+        echo "<button class='btn btn-info'>Modify</button>";
+        echo "</a>";
+        echo "<a href='deletebook.php?book_id=" . $row['book_id'] . "'>";
+        echo "<button class='btn btn-danger'>Delete Book</button>";
+        echo "</a>";
+        echo "<a href='addtocart.php?book_id=" . $row['book_id'] . "'>";
+        echo "<button class='btn btn-success right'>Add to Cart</button>";
+        echo "</a>";
+    }
+    else{
+        echo "<a href='addtocart.php?book_id=" . $row['book_id'] . "'>";
+        echo "<button class='btn btn-success right'>Add to Cart</button>";
+        echo "</a>";
+    }
+    ?>
 
-        <a href="editbookdetails.php?book_id=<?= $row['book_id'] ?>">
-            <button class="btn btn-info">Modify</button>
-        </a>
 
-        <a href="deletebook.php?book_id=<?= $row['book_id'] ?>">
-            <button class="btn btn-danger">Delete Book</button>
-        </a>
 
-        <a href="addtocart.php?book_id=<?= $row['book_id'] ?>">
-            <button class="btn btn-success right">Add to Cart</button>
-        </a>
-    </div>
+</div>
 <br>
 <br>
 <?php

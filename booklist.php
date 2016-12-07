@@ -38,7 +38,11 @@ include "includes/database.php";
 
     </table>
 
-    <a href="addbook.php"><button class="btn btn-success">Add a new Book</button></a>
+    <?php
+        if($admin == 1){
+            echo "<a href='addbook.php'><button class='btn btn-success'>Add a new Book</button></a>";
+        }
+    ?>
 <br>
 <br>
 </section>

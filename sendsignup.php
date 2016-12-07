@@ -67,6 +67,12 @@ if (!$query) {
 $id = $conn->insert_id;
 
 $conn->close();
+$_SESSION['first_name'] = $firstname;
+$_SESSION['last_name'] = $lastname;
+$_SESSION['user_name'] = $username;
+$_SESSION['user_email'] = $email;
+$_SESSION['user_id'] = $id;
+$_SESSION['is_admin'] = 0;
 
 echo "Welcome to Lending Library, $firstname";
 echo "<p><a href='index.php'>Return to Home</a></p>";
