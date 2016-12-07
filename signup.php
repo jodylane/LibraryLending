@@ -11,7 +11,7 @@ include "includes/database.php";
 
   <section class="signup-section">
 
-    <h2 class="signup-headline">Sign Up!</h2>
+    <h2 class="signup-headline">Sign Up</h2>
 
     <form class="sign-up-form" action="#">
       <input type="text" class="input" placeholder="What's your username?" autofocus>
