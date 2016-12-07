@@ -13,10 +13,13 @@ include "includes/database.php";
 
     <h2 class="signup-headline">Sign Up!</h2>
 
-    <form class="sign-up-form">
-      <input type="text" class="sign-up-input" placeholder="What's your username?" autofocus>
-      <input type="password" class="sign-up-input" placeholder="Choose a password">
-      <input type="submit" value="Sign me up!" class="sign-up-button">
+    <form class="sign-up-form" action="#">
+      <input type="text" class="input" placeholder="What's your username?" autofocus>
+      <input type="email" class="input" placeholder="What's your email?">
+      <input type="text" class="input" placeholder="What's your address?">
+      <input type="password" class="input" placeholder="Choose a password">
+      <input type="password" class="input" placeholder="Confirm your password">
+      <input type="submit" value="Sign me up!" class="btn btn-default">
     </form>
 
   </section>
