@@ -545,9 +545,13 @@ table.bookdetails td.col4 img {
   display: block;
   margin-top: 1em; }
 
-.signup-section {
-  height: auto;
-  background-color: white; }
+.signup {
+  height: auto; }
+  .signup form {
+    width: 30%;
+    margin: 0 auto; }
+  .signup .input {
+    box-sizing: border-box; }
 
 .signup-headline {
   text-align: center;
@@ -556,12 +560,6 @@ table.bookdetails td.col4 img {
   font-weight: 700;
   text-transform: uppercase;
   color: black; }
-
-.sign-up-form {
-  width: 40%;
-  margin: 0 auto; }
-  .sign-up-form .btn {
-    box-sizing: border-box; }
 
 .btn-holder {
   width: 200px;
@@ -582,3 +580,12 @@ table.bookdetails td.col4 img {
   margin: auto;
   text-transform: uppercase;
   color: black; }
+
+.login {
+  height: auto; }
+  .login form {
+    width: 30%;
+    margin: 0 auto; }
+    .login form .input {
+      box-sizing: border-box;
+      width: 100%; }
