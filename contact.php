@@ -14,19 +14,19 @@ include "includes/database.php";
 
     <h2 class="contact-headline">Contact Us!</h2>
 
-      <form class="contact-form">
+      <form class="contact-form" action="sendcontact.php" method="post">
 
         <div class="message">
 
-          <input class="input" type="text" id="input-name" placeholder="Name">
-          <input class="input" type="email" id="input-email" placeholder="Email address">
-          <input class="input" type="text" id="input-subject" placeholder="Subject">
+          <input class="input" type="text" id="input-name" placeholder="Name" required>
+          <input class="input" type="email" id="input-email" placeholder="Email address" required>
+          <input class="input" type="text" id="input-subject" placeholder="Subject" required>
 
         </div>
 
         <div class="message">
 
-          <textarea class="input" name="message" type="text" id="input-message" placeholder="Message"></textarea>
+          <textarea class="input" name="message" type="text" id="input-message" placeholder="Message" required></textarea>
 
         </div>
 

@@ -33,7 +33,7 @@ if(isset($_SESSION['cart'])){
       <a class="a-header" href="booklist.php">Book List</a>
       <a class="a-header" href="checkout.php">Cart(<?= $count?>)</a>
       <a class="a-header" href="contact.php">Contact</a>
-      <span class="signup-btn"><a class="a-header" href="signup.php">Sign Up</a></span>
+      <span class="signup-btn"><a class="a-header" href="login.php">Sign In</a></span>
     </nav>
 
     <h2 class="headline">Best source for knowledge<h2>
