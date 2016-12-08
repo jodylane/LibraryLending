@@ -48,7 +48,7 @@ if (isset($_SESSION['user_id']) &&
         <?php
         if($firstname != ""){
             echo "<a class='a-header' href='booklist.php'>Book List</a>";
-            echo "<a class='a-header' href='checkout.php'>Cart( $count )</a>";
+            echo "<a class='a-header' href='showcart.php'>Cart( $count )</a>";
         }
 
         ?>

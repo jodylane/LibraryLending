@@ -13,7 +13,7 @@
     <?php
     if($firstname != ""){
       echo "<a class='a-footer' href='booklist.php'>Book List</a>";
-      echo "<a class='a-footer' href='checkout.php'>Cart( $count )</a>";
+      echo "<a class='a-footer' href='showcart.php'>Cart( $count )</a>";
     }
 
     ?>

@@ -9,31 +9,21 @@ include "includes/header.php";
 include "includes/database.php";
 ?>
 
-  <!-- Contact form -->
-  <section class="contact">
+<!-- Contact form -->
+<section class="contact">
 
     <h2 class="contact-headline">Contact Us!</h2>
 
-      <form class="contact-form" action="sendcontact.php" method="post">
-
-        <div class="message">
-
-          <input class="input" name="name" type="text" id="input-name" placeholder="Name" required>
-          <input class="input" name="email" type="email" id="input-email" placeholder="Email address" required>
-          <input class="input" name="subject" type="text" id="input-subject" placeholder="Subject" required>
-
-        </div>
-
-        <div class="message">
-
-          <textarea class="input" name="message" type="text" id="input-message" placeholder="Message" required></textarea>
-
-        </div>
+    <form class="contact-form" action="sendcontact.php" method="post">
+        <input class="input" name="name" type="text" placeholder="Name" required>
+        <input class="input" name="email" type="email" placeholder="Email address" required>
+        <input class="input" name="subject" type="text" placeholder="Subject" required>
+        <textarea class="input" name="message" type="text" placeholder="Message" required></textarea>
 
         <input type="submit" value="Submit" class="btn btn-default">
 
-      </form>
+    </form>
 
-  </section>
+</section>
 
 <?php include "includes/footer.php"; ?>

@@ -35,7 +35,6 @@ $cart = $_SESSION['cart'];
             $sql .= " OR inventory.book_id=$id AND books.book_id=$id AND is_available=1";
         }
         $sql .= " GROUP BY title";
-        echo $sql;
         $query = $conn->query($sql);
         while($row = $query->fetch_assoc()){
             $title = $row['title'];

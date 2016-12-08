@@ -6,6 +6,7 @@
  * Time: 6:20 PM
  * Description: This file was created to
  */
+require 'includes/database.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }

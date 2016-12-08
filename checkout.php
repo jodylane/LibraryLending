@@ -14,7 +14,7 @@ $_SESSION['cart'] = "";
 require_once 'includes/header.php';
 ?>
 
-<section class='message'>";
+<section class='message'>
     <h2 class="booklist-headline">Checkout</h2>
 
     <p class="checkout">Thank you for shopping with us. Your business is greatly appreciated. You will be notified
